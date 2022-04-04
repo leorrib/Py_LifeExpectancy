@@ -1,0 +1,43 @@
+{   
+    "data_processing": {
+        "toc_path": "src/dabase/dict.png",
+        "db_path": "src/database/Life_Exp_Data.csv",
+        "cols_to_drop_na": ["Hepatitis_b", "Population"],
+        "cols_to_drop_zero": ["Inc_comp_resources", "Years_in_school"],
+        "factorize_var": "Development_status",
+        "target_var": "Life_expectancy",
+        "data_vis_hist": {
+            "bins" :  [36, 54, 72, 90], 
+            "hue" : "Development_status", 
+            "x_label" : "Life expectancy range", 
+            "y_label" : "Number of countries", 
+            "labels" : ["Developed", "Developing"]
+        },
+        "data_vis_strong_pos_corr": ["Years_in_school", "Inc_comp_resources", "Gdp", "Polio_vacc"],
+        "data_vis_strong_neg_corr": ["Thin_5_to_9_y", "Thin_10_to_19_y", "Hiv/aids", "Measles_cases"],
+        "cols_to_rename": {
+            "Thinness_5-9_years" : "Thin_5_to_9_y" ,
+            "Thinness__1-19_years" : "Thin_10_to_19_y",
+            "Measles" : "Measles_cases",
+            "Alcohol" : "Alcohol_consumption",
+            "percentage expenditure" : "GDP_on_health",
+            "Hepatitis_B" : "HepB_vacc",
+            "Polio" : "Polio_vacc",
+            "Diphtheria" : "Diphtheria_vacc",
+            "Schooling": "Years_in_school",
+            "Under-five_deaths" : "Deaths_under_5_y",
+            "Status": "Development_status",
+            "Income_composition_of_resources": "Inc_comp_resources"
+        }
+    },
+    "data_handling": {
+        "cols_not_to_normalize": ["Country", "Life_expectancy"],
+        "target_var": "Life_expectancy",
+        "cols_to_drop": ["Infant_deaths", "Gdp", "Country", "Polio_vacc", "Thin_10_to_19_y"]
+    },
+    "machine_learning": {
+        "target_var": "Life_expectancy",
+        "cols_to_drop": ["Year", "Measles_cases", "Total_expenditure"],
+        "df_train_size": 0.2
+    }
+}
