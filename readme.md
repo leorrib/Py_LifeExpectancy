@@ -1,6 +1,8 @@
 # Machine Learning - predicting the Life Expectancy in a Country
 This project returns 4 machine learning models that predict, given some data, the life expectancy in a country. Two of the models use Linear Regression (one with and another without cross validation), while the other two make use of Random Forest (again - one with and another without cross validation).
 
+## Visualizing the result
+Just open the main.ipynb file on github itself and you will be able to see the script and some metrics of the Machine Learning models created.
 
 ## How to run
 
