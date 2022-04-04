@@ -21,7 +21,7 @@ There are two ways to generate the ml models: the first one is by using the jupy
 #### Step-by-step - jupyter notebook file
 - Create a jupyter kernel (ipython kernel install --user --name=.venv)
 - Start jupyter notebook, open the main.ipynb file, select the .venv kernel and then run all the cels.
-- Make sure you delete the kernel once you are done (jupyter-kernelspec uninstall ..venv).
+- Make sure you delete the kernel once you are done (jupyter-kernelspec uninstall .venv).
 
 #### Step-by-step - python file
 - On the root dir, enter python3 'main.py'.
