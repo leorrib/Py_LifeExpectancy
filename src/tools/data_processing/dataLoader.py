@@ -3,20 +3,17 @@ import pandas as pd
 
 class DataLoader():
 
-    def diplay_toc(path):
-        img = Image(path)
+    def __init__(self, path):
+        self.path = path
+
+    def diplay_toc(self):
+        img = Image(self.path)
         display(img)
 
-    def load_data(path, blank_replacement = '_'):
-        database = pd.read_csv(path)
+    def load_data(self, blank_replacement = '_'):
+        database = pd.read_csv(self.path)
         database = database.rename(columns = lambda x: x.strip())
         database = database.rename(columns = lambda x: x.capitalize().replace(' ', blank_replacement))
         print(f'Dimensionality: {database.shape}')
         print(f'Variables:\n {database.columns}')
         return database
-
-    def change_col_names(cols_to_rename, df):
-
-        df.rename(columns = cols_to_rename, inplace = True)
-        print(f'Variables:\n {df.columns}')
-        return df

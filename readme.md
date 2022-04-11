@@ -1,5 +1,5 @@
 # Machine Learning - predicting the Life Expectancy in a Country
-This project returns 4 machine learning models that predict, given some data, the life expectancy in a country. Two of the models use Linear Regression (one with and another without cross validation), while the other two make use of Random Forest (again - one with and another without cross validation).
+This project returns 2 machine learning models that predict, given some data, the life expectancy in a country. One of the models use Linear Regression while the other two make use of Random Forest Regressor.
 
 ## Visualizing the result
 Just open the main.ipynb file on github itself and you will be able to see the script and some metrics of the Machine Learning models created.
@@ -17,6 +17,7 @@ There are two ways to generate the ml models: the first one is by using the jupy
 - On the root dir, create virtual environment (python3 -m venv .venv)
 - On the same dir, start the virtual environment (source .venv/bin/activate)
 - Install packages listed on requirements.txt (pip3 install -r requirements.txt)
+- The variables used by the scripts are on the parameters.json
 
 #### Step-by-step - jupyter notebook file
 - Create a jupyter kernel (ipython kernel install --user --name=.venv)

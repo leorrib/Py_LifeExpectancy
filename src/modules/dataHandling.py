@@ -1,4 +1,5 @@
 from src.tools.data_processing.dataHandler import DataHandler
+from src.tools.data_processing.dataExplorer import DataExplorer
 
 
 class DataHandling():
@@ -9,10 +10,9 @@ class DataHandling():
 
     def handle_data (self):
 
-        cols_to_norm = self.df.columns.difference(self.dh['cols_not_to_normalize'])
-        scaled_data = DataHandler.min_max_cols(self.df, cols_to_norm)
+        scaled_data = DataHandler(self.df).min_max_cols(self.dh['cols_to_normalize'])
 
-        DataHandler.get_strong_corr_predict_vars(scaled_data, self.dh['target_var'], 0.8)  
+        DataExplorer(scaled_data).get_strong_corr_predict_vars(self.dh['target_var'], 0.8)  
 
         scaled_data = scaled_data.drop(self.dh['cols_to_drop'], axis = 1)
 
